@@ -6,6 +6,9 @@
   "repository": "https://github.com/kiennt/tnx",
   "author": "Kien Nguyen",
   "license": "MIT",
+  "scripts": {
+    "publish:rc": "npm version prerelease --preid=rc"
+  },
   "dependencies": {
     "@tiki.vn/tini-ui": "^0.0.17"
   }
