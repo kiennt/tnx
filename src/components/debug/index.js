@@ -12,7 +12,7 @@ Component({
     getDebugItem(item) {
       let subTitle;
       if (item.type === "myx.request") {
-        subTitle = `${item.params.input.method} ${item.params.input.url}`;
+        subTitle = `${item.params.input[0].method} ${item.params.input[0].url}`;
       } else {
         subTitle = JSON.stringify(item.params.input || {});
       }
