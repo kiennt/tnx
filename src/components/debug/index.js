@@ -66,7 +66,8 @@ Component({
       });
     },
     async onSendToSlack() {
-      if (!this.props.slackUrl) {
+      const { slackUrl } = this.props;
+      if (!slackUrl) {
         return;
       }
 

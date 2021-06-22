@@ -10,6 +10,6 @@
     "publish:rc": "npm version prerelease --preid=rc"
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "^0.0.17"
+    "@tiki.vn/tini-ui": "^0.0.18"
   }
 }
