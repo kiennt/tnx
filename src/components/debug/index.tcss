@@ -1,0 +1,15 @@
+.debug-footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  /* hack to avoid bug with iOS with fallback value */
+  bottom: env(safe-area-inset-bottom, 0);
+  left: 0;
+  right: 0;
+  padding: var(--space-inset-2x-small);
+  border-top: 1px solid var(--gray10);
+}
+
+.debug-footer-button {
+  flex-grow: 1;
+}

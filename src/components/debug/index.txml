@@ -1,0 +1,39 @@
+<block tiki:for="{{items}}">
+  <list-item padding arrow data-index="{{index}}" upperSubtitle="{{item.subTitle}}"
+    lowerSubtitle="{{item.createdAt}} - {{item.latency}}ms" onClick="onTapItem">
+    <view slot="prefix">
+      <icon type="info" size="20"
+        color="{{item.status === 'success' ? 'green' : item.status === 'failure' ? 'red' : 'orange'}}" />
+    </view>
+    <view>{{item.title}}</view>
+  </list-item>
+</block>
+
+<view class="debug-footer">
+  <tu-button class="debug-footer-button" shape="pill" onTap="onClearLog">Clear</tu-button>
+</view>
+
+<bottom-sheet tiki:if="{{show}}" title="Debug detail" onClose="onClose">
+  <list-item padding upperSubtitle="{{item.createdAt}}" lowerSubtitle="{{item.latency}}ms">
+    <view>{{item.title}}</view>
+  </list-item>
+  <block tiki:if="{{item.input}}">
+    <list-item padding upperSubtitle="{{item.input}}">
+      <view>input</view>
+    </list-item>
+  </block>
+  <block tiki:if="{{item.output}}">
+    <list-item padding upperSubtitle="{{item.output}}">
+      <view>output</view>
+    </list-item>
+  </block>
+  <block tiki:if="{{item.error}}">
+    <list-item padding upperSubtitle="{{item.error}}">
+      <view>error</view>
+    </list-item>
+  </block>
+  <view slot="footer" class="tu-bottom-sheet-footer">
+    <tu-button loading="{{loading}}" class="tu-buttom-sheet-footer-button" shape="pill" onTap="onSendToSlack">Send to
+      slack</tu-button>
+  </view>
+</bottom-sheet>

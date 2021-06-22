@@ -1,0 +1,12 @@
+{
+  "name": "tnx",
+  "version": "0.1.0",
+  "description": "TiNi eXtension ",
+  "main": "index.js",
+  "repository": "https://github.com/kiennt/tnx",
+  "author": "Kien Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "@tiki.vn/tini-ui": "^0.0.17"
+  }
+}
