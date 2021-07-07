@@ -1,0 +1,7 @@
+
+{
+  "defaultTitle": "Debug",
+  "usingComponents": {
+    "debug": "tiki-miniapp-tnx/src/components/debug/index"
+  }
+}

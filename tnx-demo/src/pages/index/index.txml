@@ -1,0 +1,2 @@
+<view>This is blank page</view>
+<view onTap="goToDebug">Go To Debug</view>
